@@ -13,7 +13,7 @@ export function Footer() {
         <div className="flex flex-col items-center md:items-start gap-4">
           <div className="font-bold text-slate-400">Bordermath Compliance</div>
           <p className="font-inter text-xs leading-relaxed text-slate-500 text-center md:text-left max-w-[20rem]">
-            &copy; 2024 Bordermath Compliance. Data provided for informational
+            &copy; 2026 Bordermath Compliance. Data provided for informational
             purposes only. Bordermath is not a law firm.
           </p>
         </div>

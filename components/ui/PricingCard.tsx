@@ -9,6 +9,7 @@ interface PricingFeature {
 }
 
 interface PricingCardProps {
+  label?: string;
   name: string;
   price: string;
   period?: string;
@@ -21,6 +22,7 @@ interface PricingCardProps {
 }
 
 export function PricingCard({
+  label,
   name,
   price,
   period = "/ month",
@@ -43,12 +45,17 @@ export function PricingCard({
       )}
     >
       {badge && (
-        <div className="absolute top-0 right-0 bg-secondary text-on-secondary px-6 py-2 rounded-bl-xl text-label-caps">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-secondary text-on-secondary px-4 py-1 rounded-b-lg text-[10px] font-bold tracking-wider uppercase z-10">
           {badge}
         </div>
       )}
 
-      <div className="mb-8">
+      <div className="mb-8 mt-2">
+        {label && (
+          <div className={cn("text-xs font-semibold tracking-widest uppercase mb-2", isHighlight ? "text-slate-400" : "text-slate-500")}>
+            {label}
+          </div>
+        )}
         <h3 className="font-headline text-2xl mb-2">{name}</h3>
         <div
           className={cn(
@@ -101,8 +108,8 @@ export function PricingCard({
       </ul>
 
       <Button
-        variant={isHighlight ? "secondary" : "outline"}
-        className="w-full py-4"
+        variant={isHighlight ? "outline" : "outline"}
+        className={cn("w-full py-4", isHighlight && "bg-white text-primary border-none hover:bg-slate-100")}
         onClick={onCtaClick}
       >
         {ctaText}
