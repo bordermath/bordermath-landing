@@ -1,0 +1,85 @@
+# NextIcons Usage Rule
+
+## Overview
+
+This project mandates the use of **NextIcons** (`@deemlol/next-icons`) for all icon implementations.
+
+## Package
+
+- **Name**: `@deemlol/next-icons`
+- **Repository**: https://github.com/deemlol/next-icons
+- **Purpose**: Consistent, customizable icon system for Next.js applications
+
+## Rules
+
+1. **All icons MUST use NextIcons** - Never use raw SVG icons, other icon libraries (Lucide, Heroicons, etc.), or inline SVG elements directly in components.
+
+2. **Import icons from the package** - Use the specific icon imports provided by `@deemlol/next-icons`.
+
+## Usage Examples
+
+### Basic Usage
+
+```tsx
+import { Icon } from '@deemlol/next-icons';
+
+function MyComponent() {
+  return <Icon name="arrow-right" />;
+}
+```
+
+### With Customization
+
+```tsx
+import { Icon } from '@deemlol/next-icons';
+
+function MyComponent() {
+  return (
+    <Icon
+      name="settings"
+      color="#bffb4f"
+      size={32}
+      strokeWidth={1.5}
+    />
+  );
+}
+```
+
+### Available Props
+
+| Prop | Type | Description |
+|------|------|-------------|
+| `name` | `string` | The icon name identifier |
+| `color` | `string` | Icon color (hex, rgb, named color) |
+| `size` | `number` | Icon size in pixels |
+| `strokeWidth` | `number` | Stroke width for outlined icons |
+| `className` | `string` | Additional CSS classes |
+
+## Prohibited Patterns
+
+❌ **Do NOT use other icon libraries:**
+```tsx
+// ❌ Forbidden - Lucide React
+import { ArrowRight } from 'lucide-react';
+
+// ❌ Forbidden - Heroicons
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+
+// ❌ Forbidden - React Icons
+import { FaArrowRight } from 'react-icons/fa';
+```
+
+❌ **Do NOT use inline SVG:**
+```tsx
+// ❌ Forbidden - Inline SVG
+<svg width="24" height="24" viewBox="0 0 24 24">
+  <path d="M5 12h14M12 5l7 7-7 7" />
+</svg>
+```
+
+## Migration
+
+When refactoring existing code:
+1. Replace any non-NextIcons imports with `@deemlol/next-icons`
+2. Map the icon name to the equivalent NextIcons identifier
+3. Adjust props as needed (`color`, `size`, `strokeWidth`)

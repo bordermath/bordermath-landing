@@ -8,8 +8,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Bordermath",
-  description: "Institutional Precision and Operational Clarity",
+  title: "Bordermath | Automated Visa Compliance",
+  description:
+    "Your AI Travel Assistant for the Schengen Area. Plan and manage your stays with intelligent chat-based compliance tracking.",
 };
 
 export default function RootLayout({
