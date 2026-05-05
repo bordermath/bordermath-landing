@@ -32,12 +32,12 @@ export function FeatureCard({
   return (
     <div
       className={cn(
-        "border p-10 rounded-xl transition-colors group",
+        "border p-6 md:p-10 rounded-xl transition-colors group",
         variants[variant],
         className
       )}
     >
-      <div className="flex items-start justify-between mb-4">
+      <div className="flex flex-col sm:flex-row items-start justify-between mb-4 gap-4">
         <div>
           <div
             className={cn(
@@ -47,9 +47,10 @@ export function FeatureCard({
           >
             {icon}
           </div>
-          <h3 className="font-headline text-2xl mb-2">{title}</h3>
+          <h3 className="font-headline text-xl md:text-2xl mb-2">{title}</h3>
           <p
             className={cn(
+              "text-sm md:text-base",
               variant === "dark"
                 ? "text-on-primary-container"
                 : "text-on-surface-variant"
@@ -58,7 +59,7 @@ export function FeatureCard({
             {description}
           </p>
         </div>
-        {badge && <div className="hidden sm:block">{badge}</div>}
+        {badge && <div className="sm:block shrink-0">{badge}</div>}
       </div>
 
       {image && (

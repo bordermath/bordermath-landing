@@ -21,10 +21,10 @@ const eliteFeatures = [
 
 export function Pricing() {
   return (
-    <section id="pricing" className="py-32 px-6 bg-surface-container-low">
+    <section id="pricing" className="py-20 md:py-32 px-6 bg-surface-container-low">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="font-display-lg text-display-lg mb-4">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="font-display-lg text-4xl md:text-display-lg mb-4">
             Pricing & Plans
           </h2>
           <p className="font-body-lg text-on-surface-variant max-w-2xl mx-auto">
@@ -32,7 +32,7 @@ export function Pricing() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
           <PricingCard
             label="ENTRY"
             name="Free"
@@ -66,13 +66,13 @@ export function Pricing() {
           />
         </div>
 
-        <div className="mt-32 max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h3 className="font-headline text-2xl mb-2">Frequently Asked Questions</h3>
-            <p className="text-on-surface-variant">Everything you need to know about Bordermath subscriptions.</p>
+        <div className="mt-20 md:mt-32 max-w-4xl mx-auto">
+          <div className="text-center mb-10 md:mb-12">
+            <h3 className="font-headline text-xl md:text-2xl mb-2">Frequently Asked Questions</h3>
+            <p className="text-on-surface-variant text-sm md:text-base">Everything you need to know about Bordermath subscriptions.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 md:gap-y-10">
             <div className="border-b border-outline-variant pb-8">
               <h4 className="font-semibold mb-3 text-on-surface">Can I switch plans later?</h4>
               <p className="text-sm text-on-surface-variant leading-relaxed">
@@ -100,7 +100,7 @@ export function Pricing() {
           </div>
         </div>
 
-        <div className="mt-20 max-w-4xl mx-auto bg-surface-container border border-outline-variant rounded-2xl p-10 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="mt-12 md:mt-20 max-w-4xl mx-auto bg-surface-container border border-outline-variant rounded-2xl p-6 md:p-10 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 text-center md:text-left">
           <div className="absolute -right-10 -bottom-10 opacity-5 pointer-events-none">
             <svg width="200" height="200" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
               <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1ZM12 20.93C8.06 19.83 5 15.53 5 11V6.3L12 3.19L19 6.3V11C19 15.53 15.94 19.83 12 20.93Z" />
@@ -108,17 +108,17 @@ export function Pricing() {
           </div>
           
           <div className="relative z-10 max-w-[36rem]">
-            <h4 className="font-headline text-xl mb-3">Still have questions about Schengen rules?</h4>
+            <h4 className="font-headline text-lg md:text-xl mb-2 md:mb-3">Still have questions about Schengen rules?</h4>
             <p className="text-sm text-on-surface-variant">
               Our AI compliance officer is available 24/7 to clarify complex legal scenarios for Pro and Elite members.
             </p>
           </div>
 
-          <div className="relative z-10 flex flex-col sm:flex-row gap-4 shrink-0">
-            <button className="bg-primary text-on-primary px-6 py-3 rounded-lg font-semibold hover:bg-slate-800 transition-all text-sm">
+          <div className="relative z-10 flex flex-col sm:flex-row gap-3 md:gap-4 shrink-0 w-full md:w-auto">
+            <button className="bg-primary text-on-primary px-6 py-3 rounded-lg font-semibold hover:bg-slate-800 transition-all text-sm w-full sm:w-auto">
               Contact Sales
             </button>
-            <button className="bg-white text-primary border border-outline-variant px-6 py-3 rounded-lg font-semibold hover:bg-slate-50 transition-all text-sm">
+            <button className="bg-white text-primary border border-outline-variant px-6 py-3 rounded-lg font-semibold hover:bg-slate-50 transition-all text-sm w-full sm:w-auto">
               Read Guides
             </button>
           </div>

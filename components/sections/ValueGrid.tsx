@@ -5,10 +5,10 @@ import { Badge } from "@/components/ui/Badge";
 
 export function ValueGrid() {
   return (
-    <section id="features" className="py-32 px-6">
+    <section id="features" className="py-20 md:py-32 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-16 text-center max-w-2xl mx-auto">
-          <h2 className="font-display-lg text-display-lg mb-4">
+        <div className="mb-12 md:mb-16 text-center max-w-2xl mx-auto">
+          <h2 className="font-display-lg text-4xl md:text-display-lg mb-4">
             Precision Compliance for High-Stakes Travel
           </h2>
           <p className="font-body-lg text-on-surface-variant">
@@ -21,11 +21,11 @@ export function ValueGrid() {
           {/* Feature Card 1 - Large */}
           <FeatureCard
             className="md:col-span-2"
-            icon={<Calendar className="w-10 h-10" />}
+            icon={<Calendar className="w-8 h-8 md:w-10 md:h-10" />}
             title="Schengen 90/180 Tracker"
             description="Our rolling-window calculator predicts your exact overstay date based on historical and planned trips."
             badge={
-              <Badge variant="secondary" className="p-4 text-base">
+              <Badge variant="secondary" className="p-3 md:p-4 text-sm md:text-base">
                 82/90 Days Used
               </Badge>
             }
@@ -35,7 +35,7 @@ export function ValueGrid() {
 
           {/* Feature Card 2 */}
           <FeatureCard
-            icon={<MessageSquare className="w-10 h-10" />}
+            icon={<MessageSquare className="w-8 h-8 md:w-10 md:h-10" />}
             title="AI Chat Intelligence"
             description="Ask your assistant anything. We sync daily with international databases so you can get instant answers on complex visa requirements via chat."
           />
@@ -43,18 +43,18 @@ export function ValueGrid() {
           {/* Feature Card 3 - Dark */}
           <FeatureCard
             variant="dark"
-            icon={<Bot className="w-10 h-10" />}
+            icon={<Bot className="w-8 h-8 md:w-10 md:h-10" />}
             title="Conversational Planning"
             description="Planning a world tour? Just tell your assistant your goals, and our engine suggests the best sequence of countries to maximize your time."
           />
 
           {/* Feature Card 4 - With Alert Rows */}
-          <div className="md:col-span-2 bg-surface-container border border-outline-variant p-10 rounded-xl flex flex-col md:flex-row items-center gap-8">
+          <div className="md:col-span-2 bg-surface-container border border-outline-variant p-6 md:p-10 rounded-xl flex flex-col md:flex-row items-center gap-8">
             <div className="flex-1">
               <div className="text-4xl text-primary mb-4">
-                <Bell className="w-10 h-10" />
+                <Bell className="w-8 h-8 md:w-10 md:h-10" />
               </div>
-              <h3 className="font-headline text-2xl mb-2">Critical Alerts</h3>
+              <h3 className="font-headline text-xl md:text-2xl mb-2">Critical Alerts</h3>
               <p className="text-on-surface-variant">
                 Get notified 30 days before a visa expires or when you are 10
                 days away from reaching a stay limit.

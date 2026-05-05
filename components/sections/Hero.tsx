@@ -4,8 +4,8 @@ import { Badge } from "@/components/ui/Badge";
 
 export function Hero() {
   return (
-    <section className="relative pt-20 pb-32 overflow-hidden px-6">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section className="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden px-6">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
         <div className="z-10">
           <Badge
             variant="secondary"
@@ -15,12 +15,12 @@ export function Hero() {
             TRUSTED BY 10,000+ NOMADS
           </Badge>
 
-          <h1 className="font-display-lg text-6xl md:text-7xl mb-6 tracking-tighter leading-[1.1]">
+          <h1 className="font-display-lg text-5xl sm:text-6xl md:text-7xl mb-6 tracking-tighter leading-[1.1]">
             Your AI Travel Assistant for the{" "}
             <span className="text-secondary">Schengen Area</span>
           </h1>
 
-          <p className="font-body-lg text-on-surface-variant mb-10 max-w-[32rem]">
+          <p className="font-body-lg text-on-surface-variant mb-8 md:mb-10 max-w-[32rem]">
             Plan and manage your stays with intelligent chat-based compliance
             tracking. Stay ahead of the 90/180 Schengen rule with an AI that
             knows the law.
