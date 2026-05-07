@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
 export function CTA() {
@@ -17,12 +18,16 @@ export function CTA() {
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <Button variant="primary" size="lg" className="shadow-xl w-full sm:w-auto">
-            Start Your First Conversation
-          </Button>
-          <Button variant="outline" size="lg" className="w-full sm:w-auto">
-            Talk to Compliance Expert
-          </Button>
+          <Link href="/login">
+            <Button variant="primary" size="lg" className="shadow-xl w-full sm:w-auto">
+              Start Your First Conversation
+            </Button>
+          </Link>
+          <Link href="/login">
+            <Button variant="outline" size="lg" className="w-full sm:w-auto">
+              Talk to Compliance Expert
+            </Button>
+          </Link>
         </div>
 
         <p className="mt-8 text-xs md:text-sm text-on-surface-variant opacity-60">

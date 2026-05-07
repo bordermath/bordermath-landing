@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Button } from "./Button";
 import { Check, X } from "@deemlol/next-icons";
@@ -19,6 +20,7 @@ interface PricingCardProps {
   badge?: string;
   ctaText: string;
   onCtaClick?: () => void;
+  ctaHref?: string;
 }
 
 export function PricingCard({
@@ -32,8 +34,19 @@ export function PricingCard({
   badge,
   ctaText,
   onCtaClick,
+  ctaHref,
 }: PricingCardProps) {
   const isHighlight = variant === "highlight";
+
+  const ctaButton = (
+    <Button
+      variant={isHighlight ? "outline" : "outline"}
+      className={cn("w-full py-4", isHighlight && "bg-white text-primary border-none hover:bg-slate-100")}
+      onClick={onCtaClick}
+    >
+      {ctaText}
+    </Button>
+  );
 
   return (
     <div
@@ -107,13 +120,13 @@ export function PricingCard({
         ))}
       </ul>
 
-      <Button
-        variant={isHighlight ? "outline" : "outline"}
-        className={cn("w-full py-4", isHighlight && "bg-white text-primary border-none hover:bg-slate-100")}
-        onClick={onCtaClick}
-      >
-        {ctaText}
-      </Button>
+      {ctaHref ? (
+        <Link href={ctaHref} className="block">
+          {ctaButton}
+        </Link>
+      ) : (
+        ctaButton
+      )}
     </div>
   );
 }

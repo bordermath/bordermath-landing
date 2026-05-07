@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Shield, MessageCircle } from "@deemlol/next-icons";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
@@ -27,13 +28,17 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button variant="primary" size="lg" className="flex items-center">
-              Chat with Your Assistant
-              <MessageCircle className="w-5 h-5" />
-            </Button>
-            <Button variant="outline" size="lg">
-              View Compliance Demo
-            </Button>
+            <Link href="/login">
+              <Button variant="primary" size="lg" className="flex items-center">
+                Chat with Your Assistant
+                <MessageCircle className="w-5 h-5" />
+              </Button>
+            </Link>
+            <Link href="/login">
+              <Button variant="outline" size="lg">
+                View Compliance Demo
+              </Button>
+            </Link>
           </div>
         </div>
 

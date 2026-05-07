@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { Globe, Menu, X } from "@deemlol/next-icons";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
@@ -44,10 +45,14 @@ export function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-4">
-          <Button variant="ghost">Login</Button>
-          <Button variant="primary" size="md">
-            Start Free Trial
-          </Button>
+          <Link href="/login">
+            <Button variant="ghost">Login</Button>
+          </Link>
+          <Link href="/login">
+            <Button variant="primary" size="md">
+              Start Free Trial
+            </Button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -84,16 +89,20 @@ export function Navbar() {
               </a>
             ))}
             <div className="pt-4 space-y-2 border-t border-slate-100">
-              <Button variant="ghost" className="w-full justify-center">
-                Login
-              </Button>
-              <Button
-                variant="primary"
-                className="w-full justify-center"
-                size="md"
-              >
-                Start Free Trial
-              </Button>
+              <Link href="/login" className="block">
+                <Button variant="ghost" className="w-full justify-center">
+                  Login
+                </Button>
+              </Link>
+              <Link href="/login" className="block">
+                <Button
+                  variant="primary"
+                  className="w-full justify-center"
+                  size="md"
+                >
+                  Start Free Trial
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

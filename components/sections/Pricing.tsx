@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Bot, List } from "@deemlol/next-icons";
 import { PricingCard } from "@/components/ui/PricingCard";
 
@@ -41,6 +42,7 @@ export function Pricing() {
             description="Essential tools for those traveling to the Schengen area once a year."
             features={freeFeatures}
             ctaText="Current Plan"
+            ctaHref="/login"
           />
 
           <PricingCard
@@ -53,6 +55,7 @@ export function Pricing() {
             variant="highlight"
             badge="MOST POPULAR"
             ctaText="Upgrade to Pro"
+            ctaHref="/login"
           />
 
           <PricingCard
@@ -63,6 +66,7 @@ export function Pricing() {
             description="Ultimate peace of mind with real-time tracking and emergency compliance support."
             features={eliteFeatures}
             ctaText="Get Elite"
+            ctaHref="/login"
           />
         </div>
 
@@ -115,12 +119,16 @@ export function Pricing() {
           </div>
 
           <div className="relative z-10 flex flex-col sm:flex-row gap-3 md:gap-4 shrink-0 w-full md:w-auto">
-            <button className="bg-primary text-on-primary px-6 py-3 rounded-lg font-semibold hover:bg-slate-800 transition-all text-sm w-full sm:w-auto">
-              Contact Sales
-            </button>
-            <button className="bg-white text-primary border border-outline-variant px-6 py-3 rounded-lg font-semibold hover:bg-slate-50 transition-all text-sm w-full sm:w-auto">
-              Read Guides
-            </button>
+            <Link href="/login" className="block w-full sm:w-auto">
+              <button className="bg-primary text-on-primary px-6 py-3 rounded-lg font-semibold hover:bg-slate-800 transition-all text-sm w-full sm:w-auto">
+                Contact Sales
+              </button>
+            </Link>
+            <Link href="/login" className="block w-full sm:w-auto">
+              <button className="bg-white text-primary border border-outline-variant px-6 py-3 rounded-lg font-semibold hover:bg-slate-50 transition-all text-sm w-full sm:w-auto">
+                Read Guides
+              </button>
+            </Link>
           </div>
         </div>
       </div>
