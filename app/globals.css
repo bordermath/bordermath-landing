@@ -50,9 +50,28 @@
   --color-on-background: #1b1b1d;
   --color-surface-variant: #e4e2e3;
 
-  /* Typography */
+  /* Typography — font families */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* Typography — font-size scale (Tailwind v4 --text-* convention) */
+  --text-display-lg: 30px;
+  --text-display-lg--line-height: 36px;
+  --text-display-lg--letter-spacing: -0.02em;
+  --text-display-md: 24px;
+  --text-display-md--line-height: 32px;
+  --text-display-md--letter-spacing: -0.01em;
+  --text-headline: 20px;
+  --text-headline--line-height: 28px;
+  --text-body-lg: 16px;
+  --text-body-lg--line-height: 24px;
+  --text-body-md: 14px;
+  --text-body-md--line-height: 20px;
+  --text-label-caps: 12px;
+  --text-label-caps--line-height: 16px;
+  --text-label-caps--letter-spacing: 0.05em;
+  --text-data-mono: 14px;
+  --text-data-mono--line-height: 20px;
 
   /* Rounded */
   --radius-sm: 0.125rem;
